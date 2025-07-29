@@ -1,5 +1,6 @@
 package com.atguigu.java.ai.langchain4j;
 
+import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +25,11 @@ public class LLMTest {
     }
 
     @Autowired
-    private OpenAiChatModel openAiChatModel;
-
+    //private OpenAiChatModel openAiChatModel;
+    private ChatModel chatModel;
     @Test
     public void testSpringBoot() {
-        String answer = openAiChatModel.chat("我是谁？");
+        String answer = chatModel.chat("你是谁？");
         System.out.println(answer);
     }
 }
